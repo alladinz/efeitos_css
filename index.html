@@ -10,10 +10,26 @@
 <body>
     <div class="bar">
         <div class="opcao2" onclick="AnimaAmarelow();">MENU 1</div>
-        <div class="opcao2">MENU 2</div>
-        <div class="opcao2">MENU 3</div>
+        <div class="opcao2" onclick="AnimaMenu2();">MENU 2</div>
+        <div class="opcao2" onclick="AnimaMenu3();">MENU 3</div>
     </div>
     <div class="amarelow" id="amarelow">
+        <div class="opcao1">FUSCA      </div>
+        <div class="opcao1">KOMBI      </div>
+        <div class="opcao1">BRASÍLIA   </div>
+        <div class="opcao1">PARATI     </div>
+        <div class="opcao1">CHEVETTE   </div>
+        <div class="opcao1">CORSA      </div>
+    </div>
+    <div class="menu2" id="menu2">
+        <div class="opcao1">FUSCA      </div>
+        <div class="opcao1">KOMBI      </div>
+        <div class="opcao1">BRASÍLIA   </div>
+        <div class="opcao1">PARATI     </div>
+        <div class="opcao1">CHEVETTE   </div>
+        <div class="opcao1">CORSA      </div>
+    </div>
+    <div class="menu3" id="menu3">
         <div class="opcao1">FUSCA      </div>
         <div class="opcao1">KOMBI      </div>
         <div class="opcao1">BRASÍLIA   </div>
@@ -24,7 +40,25 @@
 </body>
 <script>
     function AnimaAmarelow(){
+        menu2.classList.remove("deslizar");
+        menu3.classList.remove("deslizar");
+        menu2.classList.remove("recolher");
+        menu3.classList.remove("recolher");
         amarelow.classList.add("deslizar");
+    }
+    function AnimaMenu2(){
+        amarelow.classList.remove("deslizar");
+        menu3.classList.remove("deslizar");
+        amarelow.classList.remove("recolher");
+        menu3.classList.remove("recolher");
+        menu2.classList.add("deslizar");
+    }
+    function AnimaMenu3(){
+        amarelow.classList.remove("deslizar");
+        menu2.classList.remove("deslizar");
+        amarelow.classList.remove("recolher");
+        menu2.classList.remove("recolher");
+        menu3.classList.add("deslizar");
     }
 </script>
 </html>
